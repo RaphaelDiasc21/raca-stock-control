@@ -8,8 +8,8 @@ type SearchParamProps = {
     searchParams: Record<string, string> | null | undefined;
   };
 
-export default function Estoque({searchParams}: SearchParamProps) {
-    const show = searchParams?.show;
+export default function Estoque() {
+    let[show,setShow] = useState(false)
     let[products,setProducts] = useState<{product: String, quantity: Number, updatedDate: String}[]>([])
     
     function deleteProduct(productName: string) {
@@ -49,11 +49,9 @@ export default function Estoque({searchParams}: SearchParamProps) {
     return (
 <div className="relative flex flex-col items-center" style={{width: "90%", margin: '0 auto'}}>
       <div className="m-5">
-        <Link href="/estoque?show=true">
-          <button className="bg-blue-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+          <button onClick={() => setShow(true)} className="bg-blue-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
             Atualizar estoque
           </button>
-        </Link>
       {show && <Entrada />}
       </div>
     <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 overflow-x-auto shadow-md sm:rounded-lg">
