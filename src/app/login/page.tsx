@@ -5,8 +5,7 @@ type SearchParamProps = {
     searchParams: Record<string, string> | null | undefined;
   };
 
-export default function Estoque({searchParams}: SearchParamProps) {
-    const show = searchParams?.show;
+export default function Estoque() {
     let[username,setUsername] = useState<string>('')
     let[password,setPassword] = useState<string>('')
     let[isUserNotfound,setIsUserNotFound] = useState<Boolean>(false)
