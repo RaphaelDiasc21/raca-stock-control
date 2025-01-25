@@ -25,7 +25,7 @@ export default function Estoque({searchParams}: SearchParamProps) {
         
         console.log("REEE")
         console.log(localStorage.getItem("token"))
-        fetch("http://localhost:3000/api/get-products", {
+        fetch(`${process.env.HOST_URL}/api/get-products`, {
             headers: new Headers({'Authorization': String(localStorage.getItem("token"))})
         })
         .then(data => {

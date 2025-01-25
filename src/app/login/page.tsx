@@ -1,7 +1,4 @@
 "use client"
-import Link from "next/link";
-import Entrada from "../components/entrada"
-import Saida from "../components/saida"
 import { useEffect, useState } from "react";
 import { redirect } from 'next/navigation';
 type SearchParamProps = {
@@ -32,7 +29,6 @@ export default function Estoque({searchParams}: SearchParamProps) {
                     redirect("/estoque")
                 }
         }))
-        
     }
     return (
         <div className="w-64 flex flex-col m-0 m-auto justify-center align-center  h-screen">

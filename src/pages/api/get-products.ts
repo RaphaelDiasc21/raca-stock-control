@@ -40,7 +40,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         let produto = await sheet.getCellByA1("A" + i)
         let quantidade = await sheet.getCellByA1("B" + i)
         let updatedDate = await sheet.getCellByA1("C" + i)
-
         arr.push({ product: produto.value, quantity: quantidade.value, updatedDate: updatedDate.value})
       }
 

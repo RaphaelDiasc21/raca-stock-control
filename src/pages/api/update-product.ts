@@ -29,8 +29,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         // ])
 
 
-        //await sheet.loadCells("A2:A80")
-
         await sheet.loadCells()
         for(let i = 2; i < 100; i++) {
           if(await sheet.getCellByA1("A" + i).value == null) break
