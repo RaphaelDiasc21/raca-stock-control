@@ -73,6 +73,7 @@ export default function Entrada() {
         setOperation("ENTRADA")
       }
       setQuantity(quantity)
+      //\yer
     }
 
     function update() {
