@@ -14,7 +14,7 @@ export default function Entrada() {
     var [products,setProducts] = useState<{product:String,quantity:Number}[]>([])
     var [operation,setOperation] = useState("ENTRADA")
   useEffect(() => {
-    fetch(`${process.env.HOST_URL}/api/get-products`, {
+    fetch(`/api/get-products`, {
       headers: new Headers({'Authorization': String(localStorage.getItem("token"))})
     })
     .then(data => {
@@ -76,7 +76,7 @@ export default function Entrada() {
 
     function update() {
       let product = products.filter(product => product["product"] == productName)
-      fetch(`${process.env.HOST_URL}/api/update-product`,{
+      fetch(`/api/update-product`,{
         headers: new Headers({'Authorization': String(localStorage.getItem("token"))}),
         method: "POST",
         body: JSON.stringify({
@@ -91,7 +91,7 @@ export default function Entrada() {
 
 
     function insert() {
-      fetch(`${process.env.HOST_URL}/api/insert-product`,{
+      fetch(`/api/insert-product`,{
         headers: new Headers({'Authorization': String(localStorage.getItem("token"))}),
         method: "POST",
         body: JSON.stringify(newProduct)

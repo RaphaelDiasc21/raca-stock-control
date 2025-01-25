@@ -26,8 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link rel={"manifest"} href="/manifest" crossOrigin="use-credentials" />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <AppRouterCacheProvider>
             {children}    

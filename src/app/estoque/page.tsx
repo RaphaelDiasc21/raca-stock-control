@@ -25,7 +25,7 @@ export default function Estoque() {
         
         console.log("REEE")
         console.log(localStorage.getItem("token"))
-        fetch(`${process.env.HOST_URL}/api/get-products`, {
+        fetch(`/api/get-products`, {
             headers: new Headers({'Authorization': String(localStorage.getItem("token"))})
         })
         .then(data => {

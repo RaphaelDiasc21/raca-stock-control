@@ -13,7 +13,7 @@ export default function Estoque() {
         e.preventDefault()
         console.log(username)
 
-        fetch(`${process.env.HOST_URL}/api/login`, {
+        fetch(`/api/login`, {
             body: JSON.stringify({username: username, password: password}),
             method: "POST"
         }).then((data) => data.json().then(resp => {
@@ -37,7 +37,7 @@ export default function Estoque() {
                 <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}></input>
 
                 <label>Senha</label>
-                <input type="text" value={password} onChange={(e) => setPassword(e.target.value)}></input>
+                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
 
                 <button onClick={(e) => auhenticateUser(e)}className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3">
                      Entrar

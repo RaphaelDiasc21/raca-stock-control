@@ -1,0 +1,56 @@
+{
+    "$schema": "https://json.schemastore.org/web-manifest",
+    "name": "Raça Estoque",
+    "short_name": "Raça estoque",
+    "theme_color": "#171717",
+    "background_color": "#171717",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "scope": "/estoque",
+    "start_url": "/estoque",
+    "icons": [
+      {
+        "src": "icon512_maskable.png",
+        "sizes": "72x72",
+        "type": "image/png"
+      },
+      {
+        "src": "icon512_maskable.png",
+        "sizes": "96x96",
+        "type": "image/png"
+      },
+      {
+        "src": "icon512_maskable.png",
+        "sizes": "128x128",
+        "type": "image/png"
+      },
+      {
+        "src": "icon512_maskable.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      },
+      {
+        "src": "icon512_maskable.png",
+        "sizes": "152x152",
+        "type": "image/png"
+      },
+      {
+        "src": "icon512_maskable.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "icon512_maskable.png",
+        "sizes": "384x384",
+        "type": "image/png"
+      },
+      {
+        "src": "icon512_maskable.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+      }
+    ],
+    "splash_pages": null
+  }
+  
