@@ -112,18 +112,18 @@ export default function Entrada() {
           <div className="text-center">
             <h3 className="text-2xl font-bold text-gray-900">Entrada de Produtos</h3>
             <div className="mt-2 px-7 py-3">
-                        <label>Produto novo ?</label>
-                        <input type="checkbox"  onChange={() => isNew()}/>
+                        <label className="mr-3">Produto novo ?</label>
+                        <input style={{backgroundColor: 'lightgrey'}} type="checkbox"  onChange={() => isNew()}/>
 
                         {isNewProduct ? (
                         <form className="max-w-sm mx-auto" >
                         <div className="mb-5">
                           <label  className="block mb-2 text-sm font-medium">Novo Produto</label>
-                          <input type="text" autoComplete="off" value={newProduct['product']} onChange={(e) => handleProduct(e.target.value)} className="bg-green-50 border text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-green-500"/>
+                          <input style={{backgroundColor: 'lightgrey'}} type="text" autoComplete="off" value={newProduct['product']} onChange={(e) => handleProduct(e.target.value)} className="bg-green-50 border text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-green-500"/>
                         </div>
                         <div>
                           <label className="block mb-2 text-sm font-medium">Quantidade</label>
-                          <input type="text" autoComplete="off" id="username-error" value={newProduct['quantity']} onChange={(e) => handleProductQuantity(e.target.value)} className="bg-green-50 border text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-green-500"/>
+                          <input style={{backgroundColor: 'lightgrey'}} type="text" autoComplete="off" id="username-error" value={newProduct['quantity']} onChange={(e) => handleProductQuantity(e.target.value)} className="bg-green-50 border text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-green-500"/>
                          {  /*  <p className="mt-2 text-sm text-red-600 dark:text-red-500"><span className="font-medium">Oops!</span> Username already taken!</p> */}
                         </div>
                         <button type="button" onClick={insert} className="w-full mt-3 focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900">
@@ -134,18 +134,18 @@ export default function Entrada() {
                         <form className="max-w-sm mx-auto">
                         <div className="mb-5">
                           <label  className="block mb-2 text-sm font-medium">Produto</label>
-                          <select id="courses" onChange={(e) => handleSelectProduct(e.target.value)} className="bg-green-50 border text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-green-500">
+                          <select style={{backgroundColor: 'lightgrey'}} id="courses" onChange={(e) => handleSelectProduct(e.target.value)} className="bg-green-50 border text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-green-500">
                               {products?.map(product => <option value={products? String(product["product"]) : ""}>{product["product"]}</option>)}
                           </select>
                         </div>
                         <div>
                           <label className="block mb-2 text-sm font-medium">Entrada</label>
-                          <input type="text" id="username-error" autoComplete="off" value={addInput} onChange={(e) => addProduct(e.target.value, "+")} className="bg-green-50 border text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-green-500"/>
+                          <input type="text" style={{backgroundColor: 'lightgrey'}} id="username-error" autoComplete="off" value={addInput} onChange={(e) => addProduct(e.target.value, "+")} className="bg-green-50 border text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-green-500"/>
                          {  /*  <p className="mt-2 text-sm text-red-600 dark:text-red-500"><span className="font-medium">Oops!</span> Username already taken!</p> */}
                         </div>
                         <div>
                           <label className="block mb-2 text-sm font-medium">Saída</label>
-                          <input type="text" id="username-error" autoComplete="off" value={minusInput} onChange={(e) => addProduct(e.target.value, "-")} className="bg-green-50 border text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-green-500"/>
+                          <input style={{backgroundColor: 'lightgrey'}} type="text" id="username-error" autoComplete="off" value={minusInput} onChange={(e) => addProduct(e.target.value, "-")} className="bg-green-50 border text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-green-500"/>
                          {  /*  <p className="mt-2 text-sm text-red-600 dark:text-red-500"><span className="font-medium">Oops!</span> Username already taken!</p> */}
                         </div>
                         <div>
