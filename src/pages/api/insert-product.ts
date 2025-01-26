@@ -42,6 +42,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           quantidadeCell.value = productBody['quantity']
 
           let updatedDateObj = new Date()
+          updatedDateObj.setHours(updatedDateObj.getHours() - 3)
           updatedDateCell.value = String(
             updatedDateObj.getDate() + 
             "/" + 
@@ -49,7 +50,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             "/" +
             updatedDateObj.getFullYear()
             + " - " +
-            updatedDateObj.getHours() +
+            updatedDateObj.getHours()  +
             ":" +
             updatedDateObj.getMinutes()
             + " - " + "ENTRADA"

@@ -11,6 +11,7 @@ export default function Entrada() {
     var [addInput,setAddInput] = useState('')
     var [minusInput,setMinusInput] = useState('')
     var [newProduct,setNewProduct] = useState<{product:string,quantity:number}>({product: '', quantity: 0})
+    var [newQuantity,setNewQuantity] = useState('')
     var [products,setProducts] = useState<{product:String,quantity:Number}[]>([])
     var [operation,setOperation] = useState("ENTRADA")
   useEffect(() => {
@@ -97,6 +98,7 @@ export default function Entrada() {
         body: JSON.stringify(newProduct)
       }).then(resp => resp.json().then(data => console.log(data)))
       setNewProduct({product: '',quantity: 0})
+      setNewQuantity('')
     }
 
     function handleProduct(productName: string) {
@@ -104,6 +106,8 @@ export default function Entrada() {
     }
 
     function handleProductQuantity(quantity: string) {
+      console.log(quantity)
+      setNewQuantity(quantity)
       setNewProduct({...newProduct,quantity: Number(quantity)})
     }
     return (
@@ -123,7 +127,7 @@ export default function Entrada() {
                         </div>
                         <div>
                           <label className="block mb-2 text-sm font-medium">Quantidade</label>
-                          <input style={{backgroundColor: 'lightgrey'}} type="text" autoComplete="off" id="username-error" value={newProduct['quantity']} onChange={(e) => handleProductQuantity(e.target.value)} className="bg-green-50 border text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-green-500"/>
+                          <input style={{backgroundColor: 'lightgrey'}} type="text" autoComplete="off" id="username-error" value={newQuantity} onChange={(e) => handleProductQuantity(e.target.value)} className="bg-green-50 border text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-green-500"/>
                          {  /*  <p className="mt-2 text-sm text-red-600 dark:text-red-500"><span className="font-medium">Oops!</span> Username already taken!</p> */}
                         </div>
                         <button type="button" onClick={insert} className="w-full mt-3 focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900">
